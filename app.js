@@ -13,5 +13,5 @@ var app = function () {
 
   return app;
 }();
-var io = require('socket.io')(http);
+
 module.exports = app;
