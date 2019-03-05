@@ -1,18 +1,12 @@
-var app = function () {
-  var http = require('http');
-  var express = require('express');
-  var app = express();
-  var fs = require('fs')
+var express = require('express');
+var app = require('express')();
+var http = require('http').createServer(app);
+var io = require('socket.io')(http);
 
-  app.set('/', __dirname + 'views');
-http.createServer(function (req,res){
-    fs.readFile('index.html',function(err,data){
-    res.writeHead(200,{'Content-Type': 'text/html'});
-    res.write(data);
-    res.end();
-  });
+app.use(express.static(__dirname + '/views'));
 
-  return app;
-}();
 
+app.get('/', function (req, res) {
+    res.sendfile('index.html');
+});
 module.exports = app;
