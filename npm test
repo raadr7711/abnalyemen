@@ -1,1 +1,9 @@
-
+# npm test
+nvm install 0.10.18
+nvm use 0.10.18
+npm install
+npm install socket.io
+npm install jquery
+npm install clientjs
+npm install bootstrap
+# grunt test
