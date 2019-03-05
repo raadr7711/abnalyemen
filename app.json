@@ -1,0 +1,19 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/raadr7711/raadr7711.github.io.git"
+    }
+  ],
+  "env": {
+  },
+  "formation": {
+  },
+  "name": "abnalyemen",
+  "scripts": {
+    "postdeploy": "start.js"
+  },
+  "stack": "heroku-18"
+}
