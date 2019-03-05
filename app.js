@@ -1,9 +1,10 @@
-var io = require('socket.io')(http);
+
 var app = function () {
   var http = require('http');
   var express = require('express');
   var app = express();
-
+  
+var io = require('socket.io')(http);
   app.set('views', __dirname + '/views');
   app.engine('html', require('ejs').renderFile);
   app.get('/', function(req, res) {
