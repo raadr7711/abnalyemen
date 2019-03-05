@@ -4,7 +4,7 @@ var app = function () {
   var app = express();
 
   app.set('/', __dirname + 'views');
-  app.engine('html', require('ejs').renderFile);
+  app.engine('text/html', require('ejs').renderFile);
   app.get('/', function(req, res) {
     res.render('index.html');
   });
