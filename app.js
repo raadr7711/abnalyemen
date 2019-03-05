@@ -13,5 +13,5 @@ var app = function () {
 
   return app;
 }();
-const io = require('socket.io')(http);
+var io = require('socket.io')(http);
 module.exports = app;
